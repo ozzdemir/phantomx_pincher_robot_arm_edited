@@ -356,10 +356,10 @@
     <child
       link="left_gripper_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="0"
-      upper="0.015"
+      lower="-0.015"
+      upper="0"
       effort="0"
       velocity="0" />
   </joint>
