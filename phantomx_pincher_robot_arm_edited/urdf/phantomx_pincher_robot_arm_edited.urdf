@@ -1,0 +1,366 @@
+<robot
+  name="phantomx_pincher_robot_arm_edited">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0618282643313807 -0.296075285539595 0.039178942244462"
+        rpy="0 0 0" />
+      <mass
+        value="0.12375240123642" />
+      <inertia
+        ixx="0.000239123524211876"
+        ixy="3.69622923513612E-08"
+        ixz="-4.886863825644E-05"
+        iyy="0.000274415352606526"
+        iyz="-6.55559926366247E-08"
+        izz="0.000260874384860992" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_shoulder_pan_link">
+    <inertial>
+      <origin
+        xyz="4.67155357021243E-05 0.00102759022626669 0.0277164698906298"
+        rpy="0 0 0" />
+      <mass
+        value="0.0435262757095505" />
+      <inertia
+        ixx="1.35023324759827E-05"
+        ixy="-1.19696883759781E-10"
+        ixz="1.26761966152459E-08"
+        iyy="1.14362384023118E-05"
+        iyz="-1.36340615871051E-07"
+        izz="7.01952563261261E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_shoulder_pan_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_shoulder_pan_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_shoulder_pan_joint"
+    type="fixed">
+    <origin
+      xyz="-0.034767 -0.2961 0.089775"
+      rpy="-7.2132E-06 -6.1215E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_shoulder_pan_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="arm_shoulder_lift_link">
+    <inertial>
+      <origin
+        xyz="1.62941256898197E-05 -0.00215840887952258 -0.0809626511316071"
+        rpy="0 0 0" />
+      <mass
+        value="0.0599991472451477" />
+      <inertia
+        ixx="4.60424932198628E-05"
+        ixy="1.46590486335229E-09"
+        ixz="6.03598196047577E-09"
+        iyy="4.13519414801232E-05"
+        iyz="-6.85025554878965E-07"
+        izz="1.1532292045134E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_shoulder_lift_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_shoulder_lift_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_shoulder_lift_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0415"
+      rpy="-3.1416 1.0749E-13 -1.4901E-08" />
+    <parent
+      link="arm_shoulder_pan_link" />
+    <child
+      link="arm_shoulder_lift_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="arm_elbow_flex_link">
+    <inertial>
+      <origin
+        xyz="1.62941259730931E-05 0.00207909112047516 -0.0809626511316071"
+        rpy="0 0 0" />
+      <mass
+        value="0.0599991472451478" />
+      <inertia
+        ixx="4.60424932198628E-05"
+        ixy="1.4659048633625E-09"
+        ixz="6.03598196074492E-09"
+        iyy="4.13519414801232E-05"
+        iyz="-6.85025554878973E-07"
+        izz="1.1532292045134E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_elbow_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_elbow_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_elbow_flex_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.107"
+      rpy="0 0 3.1416" />
+    <parent
+      link="arm_shoulder_lift_link" />
+    <child
+      link="arm_elbow_flex_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm_wrist_flex_link">
+    <inertial>
+      <origin
+        xyz="-0.0107763710729797 0.00137651469054666 -0.0439114810403849"
+        rpy="0 0 0" />
+      <mass
+        value="0.0513446164144625" />
+      <inertia
+        ixx="1.44691821042291E-05"
+        ixy="-1.52483151027995E-08"
+        ixz="-1.87158138483963E-06"
+        iyy="1.96407790097057E-05"
+        iyz="-1.41617463060133E-09"
+        izz="1.43564370654436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_wrist_flex_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_wrist_flex_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_wrist_flex_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.107"
+      rpy="0 0 0" />
+    <parent
+      link="arm_elbow_flex_link" />
+    <child
+      link="arm_wrist_flex_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm_wrist_revol_link">
+    <inertial>
+      <origin
+        xyz="-0.0108034643995525 3.00408162451915E-05 0.0211998773417275"
+        rpy="0 0 0" />
+      <mass
+        value="0.0518984073943084" />
+      <inertia
+        ixx="1.34700180494404E-05"
+        ixy="1.72078044521247E-08"
+        ixz="-8.87346267942531E-07"
+        iyy="1.80627817124038E-05"
+        iyz="1.00091470874464E-09"
+        izz="1.6852540385081E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_wrist_revol_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/arm_wrist_revol_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_wrist_revol_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00025427 0.0014125 -0.06645"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="arm_wrist_flex_link" />
+    <child
+      link="arm_wrist_revol_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="gripper_link">
+    <inertial>
+      <origin
+        xyz="-1.66394675815695E-14 0.00024722153600687 0.0112693127189871"
+        rpy="0 0 0" />
+      <mass
+        value="0.0130133548448738" />
+      <inertia
+        ixx="8.21720189689182E-06"
+        ixy="3.24864393107223E-16"
+        ixz="-7.74185429600701E-22"
+        iyy="3.35122660436342E-06"
+        iyz="1.39107760490872E-21"
+        izz="8.28304229071313E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://phantomx_pincher_robot_arm_edited/meshes/gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_joint"
+    type="prismatic">
+    <origin
+      xyz="0.00015 0 0.042144"
+      rpy="0 0 3.1416" />
+    <parent
+      link="arm_wrist_revol_link" />
+    <child
+      link="gripper_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.034"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
