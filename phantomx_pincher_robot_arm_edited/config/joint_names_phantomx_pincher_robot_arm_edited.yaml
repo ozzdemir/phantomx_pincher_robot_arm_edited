@@ -1,1 +1,0 @@
-controller_joint_names: ['arm_shoulder_lift_joint', 'arm_elbow_flex_joint', 'arm_wrist_flex_joint', 'arm_wrist_revol_joint', 'lef_gripper_joint', 'right_gripper_joint', ]
