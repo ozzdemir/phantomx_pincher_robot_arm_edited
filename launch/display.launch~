@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find phantomx_pincher_robot_arm_edited)/urdf/phantomx_pincher_robot_arm_edited.urdf" />
+    textfile="$(find phantomx_pincher_robot_arm_edited)/robots/phantomx_pincher_robot_arm_edited.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />

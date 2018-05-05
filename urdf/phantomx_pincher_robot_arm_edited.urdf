@@ -9,12 +9,12 @@
       <mass
         value="0.12375" />
       <inertia
-        ixx="0"
-        ixy="0"
-        ixz="0"
-        iyy="0"
-        iyz="0"
-        izz="0" />
+        ixx="0.00023912"
+        ixy="-4.8869E-05"
+        ixz="-3.6962E-08"
+        iyy="0.00026087"
+        iyz="6.5556E-08"
+        izz="0.00027442" />
     </inertial>
     <visual>
       <origin
@@ -44,17 +44,17 @@
     name="arm_shoulder_pan_link">
     <inertial>
       <origin
-        xyz="4.67155357022353E-05 0.00102759022626671 0.0277164698906298"
+        xyz="4.6716E-05 0.0010278 0.027716"
         rpy="0 0 0" />
       <mass
-        value="0.0435262757095505" />
+        value="0.043526" />
       <inertia
-        ixx="1.35023324759827E-05"
-        ixy="-1.19696883758747E-10"
-        ixz="1.26761966152471E-08"
-        iyy="1.14362384023118E-05"
-        iyz="-1.3634061587105E-07"
-        izz="7.01952563261261E-06" />
+        ixx="1.3502E-05"
+        ixy="-1.1957E-10"
+        ixz="1.2676E-08"
+        iyy="1.1436E-05"
+        iyz="-1.3637E-07"
+        izz="7.0195E-06" />
     </inertial>
     <visual>
       <origin
@@ -67,7 +67,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -85,7 +85,7 @@
     type="continuous">
     <origin
       xyz="-0.034767 -0.2961 0.089775"
-      rpy="-7.2132E-06 -6.1215E-17 -1.5708" />
+      rpy="-6.123E-17 0 0" />
     <parent
       link="base_link" />
     <child
@@ -97,17 +97,17 @@
     name="arm_shoulder_lift_link">
     <inertial>
       <origin
-        xyz="1.62941256900417E-05 -0.00215840887952259 -0.0809626511316069"
+        xyz="1.6294E-05 0.0027459 0.080963"
         rpy="0 0 0" />
       <mass
-        value="0.0599991472451477" />
+        value="0.059999" />
       <inertia
-        ixx="4.60424932198629E-05"
-        ixy="1.46590486335128E-09"
-        ixz="6.03598196047838E-09"
-        iyy="4.13519414801233E-05"
-        iyz="-6.85025554878973E-07"
-        izz="1.1532292045134E-05" />
+        ixx="4.6042E-05"
+        ixy="-1.4659E-09"
+        ixz="-6.036E-09"
+        iyy="4.1352E-05"
+        iyz="-6.8503E-07"
+        izz="1.1532E-05" />
     </inertial>
     <visual>
       <origin
@@ -120,7 +120,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -138,7 +138,7 @@
     type="continuous">
     <origin
       xyz="0 0 0.0415"
-      rpy="-3.1416 1.0749E-13 -1.4901E-08" />
+      rpy="0 0 0" />
     <parent
       link="arm_shoulder_pan_link" />
     <child
@@ -150,17 +150,17 @@
     name="arm_elbow_flex_link">
     <inertial>
       <origin
-        xyz="1.62941259730931E-05 0.00207909112047516 -0.0809626511316071"
+        xyz="1.6294E-05 0.0047459 0.080963"
         rpy="0 0 0" />
       <mass
-        value="0.0599991472451478" />
+        value="0.059999" />
       <inertia
-        ixx="4.60424932198628E-05"
-        ixy="1.46590486336242E-09"
-        ixz="6.03598196074564E-09"
-        iyy="4.13519414801233E-05"
-        iyz="-6.85025554878973E-07"
-        izz="1.1532292045134E-05" />
+        ixx="4.6042E-05"
+        ixy="-1.4659E-09"
+        ixz="-6.036E-09"
+        iyy="4.1352E-05"
+        iyz="-6.8503E-07"
+        izz="1.1532E-05" />
     </inertial>
     <visual>
       <origin
@@ -173,7 +173,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -190,30 +190,30 @@
     name="arm_elbow_flex_joint"
     type="continuous">
     <origin
-      xyz="0 0 -0.107"
-      rpy="0 0 3.1416" />
+      xyz="0 0 0.107"
+      rpy="2.7756E-15 0 0" />
     <parent
       link="arm_shoulder_lift_link" />
     <child
       link="arm_elbow_flex_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
   </joint>
   <link
     name="arm_wrist_flex_link">
     <inertial>
       <origin
-        xyz="-0.0107763710729793 0.0013765146905479 -0.043911481040385"
+        xyz="-0.010776 0.006036 0.043911"
         rpy="0 0 0" />
       <mass
-        value="0.0513446164144625" />
+        value="0.051345" />
       <inertia
-        ixx="1.4469182104229E-05"
-        ixy="-1.5248315102801E-08"
-        ixz="-1.87158138483963E-06"
-        iyy="1.96407790097057E-05"
-        iyz="-1.41617463060144E-09"
-        izz="1.43564370654436E-05" />
+        ixx="1.4469E-05"
+        ixy="1.5248E-08"
+        ixz="1.8716E-06"
+        iyy="1.9641E-05"
+        iyz="-1.4162E-09"
+        izz="1.4356E-05" />
     </inertial>
     <visual>
       <origin
@@ -226,7 +226,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
     <collision>
@@ -243,30 +243,30 @@
     name="arm_wrist_flex_joint"
     type="continuous">
     <origin
-      xyz="0 0 -0.107"
-      rpy="0 0 0" />
+      xyz="0 0 0.107"
+      rpy="-2.7756E-15 0 0" />
     <parent
       link="arm_elbow_flex_link" />
     <child
       link="arm_wrist_flex_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
   </joint>
   <link
     name="arm_wrist_revol_link">
     <inertial>
       <origin
-        xyz="-0.0108034643995525 3.0040816245136E-05 0.0211998773417275"
+        xyz="-0.0108034643995503 3.0040816245358E-05 0.0211998773417284"
         rpy="0 0 0" />
       <mass
         value="0.0518984073943084" />
       <inertia
         ixx="1.34700180494404E-05"
-        ixy="1.72078044521262E-08"
-        ixz="-8.87346267942528E-07"
+        ixy="1.72078044521259E-08"
+        ixz="-8.87346267942534E-07"
         iyy="1.80627817124038E-05"
-        iyz="1.00091470875179E-09"
-        izz="1.6852540385081E-05" />
+        iyz="1.00091470877893E-09"
+        izz="1.68525403850811E-05" />
     </inertial>
     <visual>
       <origin
@@ -296,8 +296,8 @@
     name="arm_wrist_revol_joint"
     type="continuous">
     <origin
-      xyz="-0.00025427 0.0014125 -0.06645"
-      rpy="3.1416 0 1.5708" />
+      xyz="-0.00025427 0.006 0.06645"
+      rpy="0 -1.1102E-14 3.1416" />
     <parent
       link="arm_wrist_flex_link" />
     <child
@@ -309,16 +309,16 @@
     name="left_gripper_link">
     <inertial>
       <origin
-        xyz="4.94333740608255E-13 -0.0074059899544428 0.0112693127189871"
+        xyz="4.94375373971678E-13 -0.00740598995443981 0.0112693127189871"
         rpy="0 0 0" />
       <mass
-        value="0.00650667742243691" />
+        value="0.00650667742243688" />
       <inertia
         ixx="1.06306547840632E-06"
-        ixy="-4.08939486704573E-17"
-        ixz="1.74831675233401E-17"
+        ixy="-4.08934939007386E-17"
+        ixz="1.74854685271235E-17"
         iyy="1.67561330218171E-06"
-        iyz="-2.61875963021118E-07"
+        iyz="-2.61875963021117E-07"
         izz="1.09598567531698E-06" />
     </inertial>
     <visual>
@@ -349,8 +349,8 @@
     name="left_gripper_joint"
     type="prismatic">
     <origin
-      xyz="0.00015 -0.014476 0.042144"
-      rpy="0 0 0" />
+      xyz="0.00015 -0.015611 0.042144"
+      rpy="-5.5511E-15 0 6.163E-29" />
     <parent
       link="arm_wrist_revol_link" />
     <child
@@ -358,25 +358,23 @@
     <axis
       xyz="0 1 0" />
     <limit
-      lower="0"
-      upper="0.015"
       effort="0"
       velocity="0" />
-</joint>
+  </joint>
   <link
     name="right_gripper_link">
     <inertial>
       <origin
-        xyz="4.93730056838615E-13 -0.00740598995444275 0.011269312718987"
+        xyz="4.94437824016813E-13 -0.00740598995443975 0.011269312718987"
         rpy="0 0 0" />
       <mass
         value="0.00650667742243691" />
       <inertia
-        ixx="1.06306547840633E-06"
-        ixy="-4.08940157882137E-17"
-        ixz="1.74815796147002E-17"
+        ixx="1.06306547840632E-06"
+        ixy="-4.08970086459739E-17"
+        ixz="1.74825559213525E-17"
         iyy="1.67561330218171E-06"
-        iyz="-2.61875963021121E-07"
+        iyz="-2.61875963021119E-07"
         izz="1.09598567531698E-06" />
     </inertial>
     <visual>
@@ -407,18 +405,16 @@
     name="right_gripper_joint"
     type="prismatic">
     <origin
-      xyz="0.00015 0.013982 0.042144"
-      rpy="0 0 3.1416" />
+      xyz="0.00015 0.015117 0.042144"
+      rpy="0 -1.1102E-14 3.1416" />
     <parent
       link="arm_wrist_revol_link" />
     <child
       link="right_gripper_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="0"
-      upper="0.015"
       effort="0"
       velocity="0" />
-</joint>
+  </joint>
 </robot>
